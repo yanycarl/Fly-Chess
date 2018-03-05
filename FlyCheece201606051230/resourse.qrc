@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/fly">
+        <file>resourse/fly/fly_blue.png</file>
+        <file>resourse/fly/fly_green.png</file>
+        <file>resourse/fly/fly_red.png</file>
+        <file>resourse/fly/fly_yellow.png</file>
+        <file>C:/Users/PC/Desktop/未标题-1.psd</file>
+    </qresource>
+    <qresource prefix="/map">
+        <file>resourse/map/map.png</file>
+    </qresource>
+</RCC>

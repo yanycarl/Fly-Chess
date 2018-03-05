@@ -1,0 +1,35 @@
+int plane[16][2]={500,0,501,0,502,0,503,0,504,0,505,0,506,0,507,0,508,0,509,0,510,0,511,0,512,0,513,0,514,0,515,0};
+int position[92][8];
+int getmap(int a[92][8]){
+    int i,j,k=0,l=0;
+    char* ca;
+    char t[50];
+    QString str="123";
+    QFile file("D:/position.txt");
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))return;
+    QTextStream in(&file);
+    for(i=0;i<92;i++){
+        QString line = in.readLine();
+        QByteArray ba = line.toLatin1();
+        ca=ba.data();
+        strcpy(t,ca);
+        for(j=0;l<8;j++){
+            if(t[j]=='0')k=k*10;
+            if(t[j]=='1')k=k*10+1;
+            if(t[j]=='2')k=k*10+2;
+            if(t[j]=='3')k=k*10+3;
+            if(t[j]=='4')k=k*10+4;
+            if(t[j]=='5')k=k*10+5;
+            if(t[j]=='6')k=k*10+6;
+            if(t[j]=='7')k=k*10+7;
+            if(t[j]=='8')k=k*10+8;
+            if(t[j]=='9')k=k*10+9;
+            if(t[j]=='#'){
+                a[i][l]=k;
+                k=0;
+                l++;
+            }
+        }
+    }
+    return 1;
+}
